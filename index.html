@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIERLESS Hub - Premium Roblox Exploit Scripts</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .header {
+            margin-top: 50px;
+        }
+        .title {
+            font-size: 3em;
+            color: #ff0000; /* Red */
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+        .subtitle {
+            font-size: 1.5em;
+            color: #cccccc;
+            margin-top: -10px;
+        }
+        .verification-box {
+            background-color: #1a1a1a;
+            border: 2px solid #ff0000; /* Red border */
+            border-radius: 15px;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .verification-box:hover {
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+        }
+        .verify-title {
+            font-size: 1.8em;
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+        .verify-text {
+            font-size: 1em;
+            color: #aaaaaa;
+        }
+        input[type="text"] {
+            background-color: #2a2a2a;
+            border: 1px solid #ff0000;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .verify-button {
+            background-color: #00ff00; /* Green */
+            color: #000000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .verify-button:hover {
+            background-color: #00cc00;
+        }
+        .scripts-section {
+            display: none;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .script-item {
+            background-color: #1a1a1a;
+            border: 1px solid #ff0000;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .script-title {
+            font-size: 1.4em;
+            color: #ff0000;
+        }
+        .script-desc {
+            font-size: 1em;
+            color: #cccccc;
+        }
+        textarea {
+            background-color: #2a2a2a;
+            border: 1px solid #ff0000;
+            color: #ffffff;
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            padding: 10px;
+            resize: none;
+            margin: 10px 0;
+        }
+        .copy-button {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .copy-button:hover {
+            background-color: #cc0000;
+        }
+        .footer {
+            font-size: 0.9em;
+            color: #888888;
+            margin-top: auto;
+            padding: 20px;
+            width: 100%;
+            border-top: 1px solid #333333;
+        }
+        .footer a {
+            color: #ff0000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">FIERLESS Hub</h1>
+        <p class="subtitle">Premium Roblox Exploit Scripts & Utilities</p>
+    </div>
+
+    <div class="verification-box">
+        <h2 class="verify-title">User Verification</h2>
+        <p class="verify-text">Click the verify button below to validate your access to FIERLESS scripts. Solve the simple captcha to proceed.</p>
+        <p id="captcha-question"></p>
+        <input type="text" id="captcha-input" placeholder="Enter answer here">
+        <button class="verify-button" onclick="verifyUser()">VERIFY USER</button>
+        <p id="error-message" style="color: #ff0000; display: none;">Incorrect answer. Try again!</p>
+    </div>
+
+    <div class="scripts-section" id="scripts">
+        <div class="script-item">
+            <h3 class="script-title">Zombie Invasion Script</h3>
+            <p class="script-desc">Zombie Kill aura, Esp, Instant proximity point, anti-afk +more</p>
+            <textarea id="script1">loadstring(game:HttpGet("https://pastefy.app/mV6UKZlO/raw"))()</textarea>
+            <button class="copy-button" onclick="copyScript('script1')">Copy Script</button>
+        </div>
+        <div class="script-item">
+            <h3 class="script-title">UGC Steal Points Script</h3>
+            <p class="script-desc">Invis Kill aura, spin kill, Hitbox expander</p>
+            <textarea id="script2">loadstring(game:HttpGet("https://pastefy.app/x5qMjfoJ/raw"))()</textarea>
+            <button class="copy-button" onclick="copyScript('script2')">Copy Script</button>
+        </div>
+        <div class="script-item">
+            <h3 class="script-title">Obby AFK or Play Script</h3>
+            <p class="script-desc">Auto Checkpoint, esp, auto ads +more</p>
+            <textarea id="script3">loadstring(game:HttpGet("https://pastebin.com/raw/XhB8Fs56"))()</textarea>
+            <button class="copy-button" onclick="copyScript('script3')">Copy Script</button>
+        </div>
+        <div class="script-item">
+            <h3 class="script-title">Aimbot Universal</h3>
+            <p class="script-desc">Universal aimbot for Roblox games</p>
+            <textarea id="script4">loadstring(game:HttpGet("https://pastefy.app/sGkkduky/raw"))()</textarea>
+            <button class="copy-button" onclick="copyScript('script4')">Copy Script</button>
+        </div>
+        <div class="script-item">
+            <h3 class="script-title">Hitbox Expander Universal Script</h3>
+            <p class="script-desc">Expands hitboxes universally</p>
+            <textarea id="script5">loadstring(game:HttpGet("https://pastefy.app/hcfMqbE8/raw"))()</textarea>
+            <button class="copy-button" onclick="copyScript('script5')">Copy Script</button>
+        </div>
+        <div class="script-item">
+            <h3 class="script-title">Universal Bypass Anti-Cheat Script</h3>
+            <p class="script-desc">Bypasses anti-cheat detections universally</p>
+            <textarea id="script6">loadstring(game:HttpGet("https://pastefy.app/tFfdliPb/raw"))()</textarea>
+            <button class="copy-button" onclick="copyScript('script6')">Copy Script</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        FIERLESS Hub © 2025 | Premium Roblox Scripts | For Educational Purposes Only.<br>
+        All scripts are property of their respective owners.<br>
+        <a href="https://www.youtube.com/@fierless" target="_blank">YouTube: fierless</a> |
+        <a href="https://www.roblox.com/users/profile?username=WHOMPWHOMPMANCRY" target="_blank">Roblox: WHOMPWHOMPMANCRY</a>
+    </div>
+
+    <script>
+        // Simple captcha generation
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        let answer = num1 + num2;
+        document.getElementById('captcha-question').innerText = `What is ${num1} + ${num2}?`;
+
+        function verifyUser() {
+            let userInput = document.getElementById('captcha-input').value;
+            if (parseInt(userInput) === answer) {
+                document.querySelector('.verification-box').style.display = 'none';
+                document.getElementById('scripts').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+        function copyScript(id) {
+            let textarea = document.getElementById(id);
+            textarea.select();
+            document.execCommand('copy');
+            alert('Script copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
